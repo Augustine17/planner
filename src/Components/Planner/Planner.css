@@ -1,0 +1,117 @@
+.planner input {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 13em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+  }
+
+.planner{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.planner button {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    cursor: pointer;
+   }
+   
+   .planner button::before,
+   .planner button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .planner button::before {
+    left: -10px;
+    background: #240046;
+   }
+   
+   .planner button::after {
+    right: -10px;
+    background: #5a189a;
+   }
+   
+   .planner button:hover::before,
+   .planner button:hover::after {
+    width: 58%;
+   }
+   
+   .planner button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   .planner button span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+
+   .cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+   }
+
+   td{
+    font-size: 32px;
+   }
+
+   td button {
+    position: relative;
+    background-color: rgb(230, 34, 77);
+    border-radius: 5px;
+    box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+    padding: 15px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 154px;
+    height: 49px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  td button::before {
+    content: "";
+    background-color: rgb(248, 50, 93);
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 700ms ease-in-out;
+    display: inline-block;
+  }
+  
+  td button:hover::before {
+    width: 100%;
+  }
+  
